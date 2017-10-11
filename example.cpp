@@ -39,9 +39,9 @@ int main(int argc, char const *argv[])
 	duk_put_prop_string(ctx, -2, "currentDir");
 
 	if (strcmp(argv[1], CREATE_ARG) == 0) {
-		push_file_as_string(ctx, "createdir.js");
+		push_file_as_string(ctx, "./js/createdir.js");
 	} else if (strcmp(argv[1], DELETE_ARG) == 0) {
-		push_file_as_string(ctx, "removedir.js");
+		push_file_as_string(ctx, "./js/removedir.js");
 	} else {
 		print_args_error();
 		duk_destroy_heap(ctx);
